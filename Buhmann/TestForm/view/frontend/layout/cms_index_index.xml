@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!--
+            Удалил дефолтный контент так как удалить виджеты затыканные из админки в xml нельзя
+        -->
+        <referenceBlock name="content" display="false" />
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceContainer name="main">
+            <container name="home.content" label="Home Content Area" after="content.top" />
+        </referenceContainer>
+        <move element="customer.section.config" destination="home.content" />
+        <move element="customer.customer.data" destination="home.content" />
+        <move element="customer.data.invalidation.rules" destination="home.content" />
+        <referenceContainer name="home.content">
+            <uiComponent name="testform_form"/>
+        </referenceContainer>
+    </body>
+</page>
