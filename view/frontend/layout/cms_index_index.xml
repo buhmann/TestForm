@@ -8,7 +8,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <!--
-            Удалил дефолтный контент так как удалить виджеты затыканные из админки в xml нельзя
+            Removing default content
         -->
         <referenceBlock name="content" display="false" />
         <referenceBlock name="page.main.title" remove="true" />
