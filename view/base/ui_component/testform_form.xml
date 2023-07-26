@@ -6,7 +6,6 @@
  */
 -->
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
-
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">testform_form.testform_form_data_source</item>
@@ -104,7 +103,7 @@
                     <item name="component" xsi:type="string">Magento_Ui/js/form/element/boolean</item>
                     <item name="template" xsi:type="string">ui/form/field</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/checkbox</item>
-                    <item name="label" xsi:type="string">Random check</item>
+                    <item name="label" xsi:type="string">Agree checkbox</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="formElement" xsi:type="string">checkbox</item>
@@ -121,7 +120,7 @@
         <field name="country">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="component" xsi:type="string">Buhmann_TestForm/js/form/element/country-select</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/form/element/select</item>
                     <item name="template" xsi:type="string">ui/form/field</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/select</item>
                     <item name="label" xsi:type="string">Country</item>
@@ -134,12 +133,7 @@
                         <item name="required-entry" xsi:type="boolean">true</item>
                     </item>
                 </item>
-                <item name="options" xsi:type="array">
-                    <item name="0" xsi:type="array">
-                        <item name="label" xsi:type="string">Please select value</item>
-                        <item name="value" xsi:type="string"></item>
-                    </item>
-                </item>
+                <item name="options" xsi:type="object">Magento\Directory\Model\Config\Source\Country</item>
             </argument>
         </field>
 
